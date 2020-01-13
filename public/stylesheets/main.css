@@ -1,0 +1,125 @@
+/* login NO ACCOUNT? text color */
+.lead{
+    color: black;
+}
+
+/* top icon and text color */
+.text-center{
+    color: black;
+}
+
+/* login NO ACCOUNT? text color */
+/* .lead.mb-3{
+    color: white;
+} */
+
+/* body */
+body{
+    background-color: white ;
+    margin:0 auto;
+    z-index:-1;
+}
+
+/* table bg */
+.table{
+    background-color: whitesmoke;
+    /* border: 1px solid whitesmoke; */
+    /* border-radius: 30px; */
+}
+
+/* list table */
+table.list-table {
+     margin:50 50%;
+    width:100%;
+    padding: 10px;
+    
+}
+
+/* th for all tables */
+ th{
+    background-color: gray;
+    color:white;
+    /* width: 200px; */
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+}
+.list-table tbody{
+    background-color: whitesmoke;
+    /* padding: 10px; */
+}
+
+/* th td column sizing */
+.list-table th,
+td {
+  /* border: 1px solid black; */
+  width: 50%;
+  overflow: hidden;
+  padding: 8px;
+  border-bottom: 1px solid lightgrey;
+}
+#list-table h1, .newJob, .jobDetails, .editJobs {
+    background-color: darkgray;
+    color: white;
+    /* text-transform: uppercase; */
+    text-align: center;
+    margin: .5em 0 .5em 0;
+    padding: 4px
+}
+
+/* for mobile */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #list-table h1 {
+    width: 50%;
+    background-color: white;
+    color: black; /*#E22620 will usethis color later */
+     /* justify-content: center; */
+  
+  }
+}
+
+/* body */
+body{
+    background-color: #4887B0;
+  
+}
+
+/* nav items padding */
+.navbar{
+    /* margin-top: 0px; */
+    /* padding-left: 0px; */
+     /* width: 100%;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0; */
+      /* z-index: 1; */
+     
+    /* padding-left: 80px; */
+}
+
+/* collapse items padding */
+.collapse{
+    padding-left: 280px;
+    /* z-index: 0; */
+}
+
+/* welcome username padding */
+p.lead {
+    /* padding-left: 510px;
+    margin-top: 8px; */
+    padding-left: 20px;
+    color: white;
+}
+
+/* logout padding */
+#logout{
+    /* padding-left: 20px; */
+    padding-left: 710px;
+}
+p.lead{
+    color: black;
+}
+
+
+

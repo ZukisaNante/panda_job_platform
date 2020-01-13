@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+    <div class="container" id="list-table">
+      <h3><a  class="btn btn-secondary" href="/employees/create"><i class="fas fa-plus"></i>  CREATE JOBS</a></h3>
+      <h1>Job List</h1>
+      <p> 
+      <nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Quick Search</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" id="myInput"  type="search" placeholder="Search" aria-label="Search">
+    <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+  </form>
+</nav> 
+</p>
+      <% if(employees.length>0) { %>
+      <table class="list-table   table-hover table-responsive-sm ">
+        <thead>
+           <tr>
+            <th>Title</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody id="myTable">
+
+          <% for(var i=0; i<employees.length;i++) { %>
+            <tr >
+              <td ><a href="/employees/show/<%= employees[i]._id%>"><%= employees[i].jobTitle%></a></td>
+             
+              <td><%= employees[i].jobCity%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>
+ 

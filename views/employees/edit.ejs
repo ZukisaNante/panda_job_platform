@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Jobs</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="container">
+      <h3><a   class="btn btn-secondary" href="/employees/index2"><i class="fas fa-th-list"></i>  JOB LIST</a></h3> 
+      <h1 class="editJobs">Edit Jobs</h1>
+      <form action="/employees/update/<%= employee._id%>" method="post" class="was-validated">
+         <table class="table table-bordered table-hover">
+          <tbody>
+            <tr  class="m-0">
+              <td class="w-25"><label for="validationTooltip04">Job Title</label></td>
+              <td class="w-75"><input type="text" name="jobTitle"   class="form-control is-valid"  value="<%=employee.jobTitle%> "  required /></td>
+            </tr>
+            <tr class="m-0">
+              <td class="w-25">Job Description</td>
+              <td class="w-75"><textarea  class="form-control"   rows="3" name="jobDescription" required>  <%= employee.jobDescription %></textarea></td>
+            </tr>
+             <tr class="m-0">
+              <td class="75">Required Skills</td>
+               <td class="25"><textarea class="form-control"   rows="3" name="jobSkills" required>  <%= employee.jobSkills %></textarea></td>
+            </tr>
+              <tr class="m-0">
+             <td class="25">Required Qualification</td>
+              <td class="75"><textarea class="form-control"   rows="3" name="jobQualification" required> <%= employee.jobQualification %></textarea></td>
+            </tr>
+                <tr class="m-0">
+                 <td class="25">Candidate Profile</td>
+               <td class="75"><textarea class="form-control"   rows="3"  name="jobCandidateProfile" required> <%= employee.jobCandidateProfile %></textarea></td>
+            </tr>
+            <tr class="m-0">
+            <td class="25">Job Offer</td>
+               <td class="75"><textarea class="form-control"   rows="3" name="jobOffer" required> <%= employee.jobOffer %></textarea></td>
+            </tr>
+            <tr class="m-0">
+              <td class="25">Company Address</td>
+               <td class="75"><input type="text" name="jobAddress" class="form-control is-valid" value="<%= employee.jobAddress %>" required/></td>
+            </tr>
+            <tr class="m-0">
+              <td class="25">City</td>
+               <td class="75"><input type="text" name="jobCity" class="form-control is-valid" value="<%= employee.jobCity %>" required/></td>
+            </tr>
+           <tr class="m-0">
+              <td class="25">Bruto</td>
+              <td class="75"><input type="number" name="jobSalary" class="form-control is-valid"  value="<%= employee.jobSalary %>" required/></td>
+            </tr>
+            <tr>
+              <td colspan="2"><button type="submit" class="btn btn-secondary btn-lg btn-block"><i class="fas fa-edit fa-lg text-info" aria-hidden="true"></i> Update</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>
+

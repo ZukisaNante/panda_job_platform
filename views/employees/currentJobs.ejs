@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  
+    <div class="container" id="list-table">
+      <h3><a  class="btn btn-secondary" href="/employees/create"><i class="fas fa-plus"></i>  CREATE JOBS</a></h3>
+      <h1>Job List</h1>
+      <% if(employees.length>0) { %>
+      <table class="list-table   table-hover table-responsive-sm ">
+        <thead>
+           <tr>
+            <th>Title</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        <tbody>
+
+          <% for(var i=0; i<employees.length;i++) { %>
+            <tr >
+              <td ><a href="/employees/showSeeker/<%= employees[i]._id%>"><%= employees[i].jobTitle%></a></td>
+              <td><%= employees[i].jobCity%></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+      <% } else { %>
+        <div>No employees found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>
+ 

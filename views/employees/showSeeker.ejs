@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Job Detail</title>
+     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $(".edit").on("click", function() {
+    const staffNumber = 'secretcode123';
+   let foo = prompt('Please enter your staff number to proceed!');
+   let bar = confirm('Confirm or deny');
+
+
+console.log(foo, bar);
+   
+  });
+});
+</script> -->
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+  </head>
+  <body>
+    <div class="container bg-light">
+      <h3><a  class="btn btn-secondary" href="/employees/index2"><i class="fas fa-th-list"></i>  JOB LIST</a></h3>
+      <h1 class="jobDetails">Job Details</h1> 
+     
+  
+  <div>
+     <h2>Job Title</h2>
+            <p><%= employee.jobTitle %></p>
+  </div>
+           
+        <div>
+            <h4>Job Description</h4>
+           <p><%= employee.jobDescription %></p>
+        </div>
+          
+          <div>
+             <h4>Required Skills</h4>
+           <p><%= employee.jobSkills %></p>
+          </div>
+           
+          <div>
+             <h4>Required Qualification</h4>
+          <p><%= employee.jobQualification %></p>
+          </div>
+           
+          <div>
+            <h4>Candidate Profile</h4>
+              <p><%= employee.jobCandidateProfile %></p>
+          </div>
+            
+          <div>
+             <h4>Job Offer</h4>
+         <p><%= employee.jobOffer %></p>
+          </div>
+           
+           <div>
+              <h4>Company Address</h4>
+          <p><%= employee.jobAddress %></p>
+           </div>
+           
+     <div>
+        <h4>City</h4>
+          <p><%= employee.jobCity %></p>
+     </div>
+           
+        <div>
+          <h4>Bruto</h4>
+            <p>$<%= employee.jobSalary %>/year</p>
+        </div>  
+        
+      <br>
+        <h3><a href="/upload/" class="btn btn-secondary btn-lg btn-block"  id="apply"><i class="fas fa-hand-point-right fa-lg text-info" aria-hidden="true"></i>  APPLY</a></h3>
+         <% if(employee && employee.isAdmin){ %>
+        <h3 class="edit"><a href="/employees/edit/<%= employee._id%>" class="btn btn-secondary btn-lg btn-block" ><i class="fas fa-edit fa-lg text-info" aria-hidden="true"></i>   EDIT</a></h3>
+      <form action="/employees/delete/<%= employee._id%>" class="delete" method="post">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg text-warning" aria-hidden="true"></i>   DELETE</button>
+      </form>
+        <% } %>
+    </div>
+  </body>
+</html>

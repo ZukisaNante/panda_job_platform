@@ -1,0 +1,62 @@
+
+    <div class="container">
+      <h3><a  class="btn btn-secondary" href="/employees/index2"><i class="fas fa-th-list"></i>  JOB LIST</a></h3>
+      <h1 class="jobDetails">Job Details</h1> 
+      <table  class="table table-bordered table-hover  table-responsive-sm" id="table_list"> <!-- table-dark  add this to make it dark-->
+        <tbody>
+          <tr class="m-0">
+            <td class="w-25">Job Title</td>
+            <!-- <td class="w-25">:</td> -->
+            <td class="w-75"><%= employee.jobTitle %></td>
+          </tr>
+          <tr>
+            <td>Job Description</td>
+            <!-- <td>:</td> -->
+           <td><%= employee.jobDescription %></td>
+          </tr>
+          <tr>
+            <td>Required Skills</td>
+            <!-- <td>:</td> -->
+           <td><%= employee.jobSkills %></td>
+          </tr>
+           <tr>
+            <td>Required Qualification</td>
+            <!-- <td>:</td> -->
+          <td><%= employee.jobQualification %></td>
+          </tr>
+           <tr>
+            <td>Candidate Profile</td>
+            <!-- <td>:</td> -->
+              <td><%= employee.jobCandidateProfile %></td>
+          </tr>
+           <tr>
+            <td>Job Offer</td>
+            <!-- <td>:</td> -->
+         <td><%= employee.jobOffer %></td>
+          </tr>
+           <tr>
+            <td>Company Address</td>
+            <!-- <td>:</td> -->
+          <td><%= employee.jobAddress %></td>
+          </tr>
+          <tr>
+            <td>City</td>
+            <!-- <td>:</td> -->
+          <td><%= employee.jobCity %></td>
+          </tr>
+          <tr>
+            <td>Bruto</td>
+            <!-- <td>:</td> -->
+            <td>$<%= employee.jobSalary %>/year</td>
+          </tr>
+        </tbody>
+      </table> 
+      <h3><a href="/upload/" class="btn btn-secondary btn-lg btn-block"  id="apply"><i class="fas fa-hand-point-right fa-lg text-info" aria-hidden="true"></i>  APPLY</a></h3>
+      <h3 class="edit"><a href="/employees/edit/<%= employee._id%>" class="btn btn-secondary btn-lg btn-block" ><i class="fas fa-edit fa-lg text-info" aria-hidden="true"></i>   EDIT</a></h3>
+      <form action="/employees/delete/<%= employee._id%>" class="delete" method="post">
+        <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg text-warning" aria-hidden="true"></i>   DELETE</button>
+      </form>
+    </div>
+  
+
+ 
